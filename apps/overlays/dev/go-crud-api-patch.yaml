@@ -5,7 +5,7 @@ metadata:
   name: go-crud-api
   namespace: go-crud-api
 spec:
-  replicas: 1
+  replicas: 2
   template:
     spec:
       containers:
