@@ -1,0 +1,18 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: podinfo
+        env:
+        - name: PODINFO_UI_COLOR
+          value: "#ff0000"
+        - name: PODINFO_UI_MESSAGE
+          value: "Production Environment"
+        # Production uses base resources (highest limits)

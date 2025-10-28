@@ -1,0 +1,10 @@
+# Flux-generated files
+.flux/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
