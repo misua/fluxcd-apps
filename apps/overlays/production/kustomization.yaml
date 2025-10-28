@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - ../../base
 patches:
-  - path: podinfo-patch.yaml
   - path: go-crud-api-patch.yaml
