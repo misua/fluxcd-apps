@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-crud-api
+  namespace: go-crud-api
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: go-crud-api
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ENVIRONMENT
+          value: "development"
+        resources:
+          requests:
+            cpu: 50m
+            memory: 32Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi

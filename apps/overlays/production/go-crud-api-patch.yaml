@@ -1,0 +1,18 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-crud-api
+  namespace: go-crud-api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: go-crud-api
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ENVIRONMENT
+          value: "production"
+        # Production uses base resources (highest limits)
